@@ -34,8 +34,8 @@ std::vector<Measurement> Storage::getSensor(const std::string& sensorName) const
     return selectedSensor;
 }
 
-std::vector<float> Storage::getSensorValues(const std::string& sensorName) const {
-    std::vector<float> sensorValues;   // empty list to save all measurement of selected sensor
+std::vector<double> Storage::getSensorValues(const std::string& sensorName) const {
+    std::vector<double> sensorValues;   // empty list to save all measurement of selected sensor
     for (const auto& m : measurements) {
         if (m.sensorName == sensorName) {
             sensorValues.push_back(m.value);

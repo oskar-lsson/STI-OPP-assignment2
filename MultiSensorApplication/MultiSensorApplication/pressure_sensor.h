@@ -1,6 +1,6 @@
 #pragma once
 #include "sensor.h"
-class PressureSensor {
+class PressureSensor : public Sensor {
 private:
     std::string sensorName_;
     double minValue_;

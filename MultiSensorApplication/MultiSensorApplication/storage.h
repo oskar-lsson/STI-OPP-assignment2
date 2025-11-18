@@ -12,7 +12,7 @@ public:
     void printAll() const;
 
     std::vector<Measurement> getSensor(const std::string& sensorName) const;        //used for sorting the vector to one sensor, later used for showing statistics
-    std::vector<float> getSensorValues(const std::string& sensorName) const;
+    std::vector<double> getSensorValues(const std::string& sensorName) const;
 
     int count(const std::string& sensorName) const;
     float average(const std::string& sensorName) const;
