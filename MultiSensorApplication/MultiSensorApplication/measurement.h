@@ -4,7 +4,7 @@
 struct Measurement {
     std::string sensorName;
     std::string unit;
-    double value;  // Changed from float to double for consistency
+    double value;
     std::string timestamp;
 
     void print() const;
