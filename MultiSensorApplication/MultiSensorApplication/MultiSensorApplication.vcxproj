@@ -124,20 +124,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="application.cpp" />
     <ClCompile Include="humidity_sensor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pressure_sensor.cpp" />
+    <ClCompile Include="measurement.cpp" />
     <ClCompile Include="storage.cpp" />
     <ClCompile Include="temperature_sensor.cpp" />
+    <ClCompile Include="threshold.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="application.h" />
     <ClInclude Include="humidity_sensor.h" />
     <ClInclude Include="measurement.h" />
     <ClInclude Include="pressure_sensor.h" />
     <ClInclude Include="sensor.h" />
     <ClInclude Include="storage.h" />
     <ClInclude Include="temperature_sensor.h" />
+    <ClInclude Include="threshold.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
