@@ -1,6 +1,6 @@
-# 🌡️ Multi-Sensor Monitoring System with Threshold Alarms
+#  Multi-Sensor Monitoring System with Threshold Alarms
 
-## 📋 Overview
+## Overview
 This project is a C++ application that models an **IoT-based sensor monitoring system** with alarm capabilities.  
 The program can **simulate measurements**, **store data**, **perform statistical analysis**, **configure threshold alarms**, and **handle file input/output**.  
 Users interact with the program through a **menu-based terminal interface**.
@@ -9,7 +9,7 @@ This system demonstrates **object-oriented design** using **inheritance** and **
 
 ---
 
-## 🎯 Purpose
+## Purpose
 The goal of this project is to practice:
 - Building a **multi-class C++ system** with clear separation of responsibility  
 - Implementing **polymorphic sensor classes** with a common interface  
@@ -20,7 +20,7 @@ The goal of this project is to practice:
 
 ---
 
-## 🧩 Program Features
+## Program Features
 The program can:
 1. Manage **multiple sensors** of different types (Temperature, Humidity, Pressure)  
 2. Simulate **measurement values** within defined intervals  
@@ -33,7 +33,7 @@ The program can:
 
 ---
 
-## 🕒 Timestamps
+## Timestamps
 Each measurement automatically gets a **timestamp** using the current system time (`std::chrono`).  
 The timestamp is stored in the `Measurement` struct and displayed when data is printed or saved to a file.
 
@@ -44,7 +44,7 @@ Example format:
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 ```
 project/
 ├── main.cpp
@@ -62,7 +62,7 @@ project/
 
 ---
 
-## ⚙️ Classes and Structures
+## Classes and Structures
 
 ### **Sensor (Base Class)**
 Abstract base class for all sensor types.
@@ -136,7 +136,7 @@ Main application controller managing sensors, storage, thresholds, and alarms.
 
 ---
 
-## 📊 Data Analysis
+## Data Analysis
 For each sensor, the system can calculate:
 - Number of measurements  
 - Average value  
@@ -147,7 +147,7 @@ Formatted output is displayed using `std::setprecision` and `std::setw`.
 
 ---
 
-## 🚨 Threshold Alarm System
+## Threshold Alarm System
 Users can configure custom thresholds for each sensor:
 - Set a **limit value**
 - Choose alarm direction: **over** or **under** the limit
@@ -163,7 +163,7 @@ ALARM TRIGGERED!
 
 ---
 
-## 💾 File Format
+## File Format
 CSV format used for data persistence:
 ```
 timestamp,sensor,value,unit
@@ -179,7 +179,7 @@ File handling uses:
 
 ---
 
-## 🧭 Menu Interface
+## Menu Interface
 User menu options:
 
 | Option | Description |
@@ -197,7 +197,7 @@ Invalid input is handled gracefully with clear error messages.
 
 ---
 
-## 🧮 Example Run
+## Example Run
 ```
 =====  SENSOR MENU  =====
 [1] Read new measurements
@@ -219,7 +219,7 @@ Measurements added successfully.
 
 ---
 
-## 🧰 Technical Requirements
+## Technical Requirements
 - Language: **C++17** or later  
 - Compiler: Visual Studio, g++, or clang++  
 - Uses:
@@ -233,7 +233,7 @@ Measurements added successfully.
 
 ---
 
-## 🏗️ Architecture Highlights
+## Architecture Highlights
 - **Polymorphic Design**: Base `Sensor` class with specialized implementations
 - **Smart Pointers**: Modern C++ memory management with `std::unique_ptr`
 - **Separation of Concerns**: Distinct classes for sensors, storage, measurements, thresholds, and utilities
