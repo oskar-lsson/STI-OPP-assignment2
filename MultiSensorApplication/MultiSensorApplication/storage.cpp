@@ -70,8 +70,8 @@ void Storage::printSensorStatistics(const std::string& sensorName) {
         std::cerr << "PRINT FAILED: No values" << std::endl;
         return;
     }
+    
     std::cout << "--- " << sensorName << " ---\n";
-
     for (const auto& m : getSensor(sensorName)) {
         std::cout << m.timestamp << ", " << std::right << std::setw(4) << std::fixed << std::setprecision(2) << m.value << " " << m.unit << std::endl;
     }
