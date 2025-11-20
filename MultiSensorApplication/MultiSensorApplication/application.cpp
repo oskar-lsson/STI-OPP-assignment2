@@ -212,7 +212,7 @@ void Application::checkThreshold(const std::string& sensorName, double value, co
 
         alarms.push_back(alarm);
 
-        std::cout << " ALARM TRIGGERED! ";
+        std::cout << "- ALARM TRIGGERED! -";
         alarm.print();
     }
 }
