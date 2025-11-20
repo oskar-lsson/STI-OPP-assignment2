@@ -23,11 +23,11 @@ namespace utils {
     }
 
     double calculateMin(const std::vector<double>& values) {
-        return *std::min_element(values.begin(), values.end());
+        return values.empty() ? 0.0 : *std::min_element(values.begin(), values.end());
     }
 
     double calculateMax(const std::vector<double>& values) {
-        return *std::max_element(values.begin(), values.end());
+        return values.empty() ? 0.0 : *std::max_element(values.begin(), values.end());
     }
 
     double calculateStdDev(const std::vector<double>& values) {

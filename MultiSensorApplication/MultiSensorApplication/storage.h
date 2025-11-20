@@ -15,10 +15,10 @@ public:
     std::vector<double> getSensorValues(const std::string& sensorName) const;
 
     int count(const std::string& sensorName) const;
-    float average(const std::string& sensorName) const;
-    float minimum(const std::string& sensorName) const;
-    float maximum(const std::string& sensorName) const;
-    float stdDeviation(const std::string& sensorName) const;
+    double average(const std::string& sensorName) const;
+    double minimum(const std::string& sensorName) const;
+    double maximum(const std::string& sensorName) const;
+    double stdDeviation(const std::string& sensorName) const;
     void printSensorStatistics(const std::string& sensorName);                      //Prints the statistics
 
     void saveToFile(const std::string& filename) const;

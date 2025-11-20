@@ -12,7 +12,6 @@ void Storage::addMeasurement(const Measurement& m) {
 void Storage::printAll() const {
     if (measurements.empty()) {
         std::cerr << "PRINT FAILED: No values" << std::endl;
-
     }
     else {
         for (auto& m : measurements) {
@@ -49,20 +48,19 @@ int Storage::count(const std::string& sensorName) const {
     auto val = getSensorValues(sensorName);
     return val.size();
 }
-float Storage::average(const std::string& sensorName) const {
+double Storage::average(const std::string& sensorName) const {
     auto val = getSensorValues(sensorName);
     return utils::calculateAverage(val);
 }
-float Storage::minimum(const std::string& sensorName) const {
+double Storage::minimum(const std::string& sensorName) const {
     auto val = getSensorValues(sensorName);
     return utils::calculateMin(val);
-
 }
-float Storage::maximum(const std::string& sensorName) const {
+double Storage::maximum(const std::string& sensorName) const {
     auto val = getSensorValues(sensorName);
     return utils::calculateMax(val);
 }
-float Storage::stdDeviation(const std::string& sensorName) const {
+double Storage::stdDeviation(const std::string& sensorName) const {
     auto val = getSensorValues(sensorName);
     return utils::calculateStdDev(val);
 }

@@ -79,12 +79,11 @@ void Application::showMenu() {
 void Application::handleReadMeasurements() {
     std::cout << "\nReading new measurements...\n";
 
-    // Polymorphic call to read() through base class pointer
     for (const auto& sensor : sensors) {
         Measurement m;
-        m.sensorName = sensor->getName();    // Virtual function call
-        m.unit = sensor->getUnit();          // Virtual function call
-        m.value = sensor->read();         // Virtual function call
+        m.sensorName = sensor->getName();    
+        m.unit = sensor->getUnit();          
+        m.value = sensor->read();         
         m.timestamp = utils::getCurrentTimestamp();
 
         storage.addMeasurement(m);
@@ -139,7 +138,6 @@ void Application::handleConfigureThreshold() {
     std::cout << "Select sensor (1-" << sensors.size() << "): ";
     int choice;
     std::cin >> choice;
-
     if (choice < 1 || choice > static_cast<int>(sensors.size())) {
         std::cout << "Invalid choice.\n";
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -158,7 +156,6 @@ void Application::handleConfigureThreshold() {
     std::cout << "[2] Value goes UNDER limit\n";
     std::cout << "Choice: ";
     std::cin >> direction;
-
     if (direction != 1 && direction != 2) {
         std::cout << "Invalid choice.\n";
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -169,7 +166,6 @@ void Application::handleConfigureThreshold() {
     t.sensorName = sensorName;
     t.limit = limit;
     t.over = (direction == 1);
-
     thresholds[sensorName] = t;
 
     std::cout << "Threshold configured for " << sensorName << ": "
@@ -216,7 +212,7 @@ void Application::checkThreshold(const std::string& sensorName, double value, co
 
         alarms.push_back(alarm);
 
-        std::cout << "⚠️  ALARM TRIGGERED! ";
+        std::cout << " ALARM TRIGGERED! ";
         alarm.print();
     }
 }

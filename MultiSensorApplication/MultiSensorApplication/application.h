@@ -11,9 +11,9 @@ class Application
 {
 private:
     Storage storage;
-    std::vector<std::unique_ptr<Sensor>> sensors;  // Polymorphic storage!
-    std::map<std::string, Threshold> thresholds;   // Sensor name -> Threshold
-    std::vector<Alarm> alarms;                     // List of triggered alarms
+    std::vector<std::unique_ptr<Sensor>> sensors;  
+    std::map<std::string, Threshold> thresholds;   
+    std::vector<Alarm> alarms;                    
     bool running;
 
     void showMenu();
@@ -22,8 +22,8 @@ private:
     void handleShowAll();
     void handleSaveToFile();
     void handleLoadFromFile();
-    void handleConfigureThreshold();  // NEW
-    void handleShowAlarms();          // NEW
+    void handleConfigureThreshold();  
+    void handleShowAlarms();         
     void clearWindow();
 
     void checkThreshold(const std::string& sensorName, double value, const std::string& timestamp);
